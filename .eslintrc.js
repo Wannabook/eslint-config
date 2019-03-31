@@ -25,7 +25,12 @@ module.exports = {
       "warn",
       { "blankLine": "always", "prev": "*", "next": "return" }
     ],
-    "prettier/prettier": "warn",
+    "prettier/prettier": ["warn", {
+      "tabWidth": 2,
+      "trailingComma": "es5",
+      "semi": true,
+      "singleQuote": true,
+    }],
     "require-await": "error",
     "quotes": ["warn", "single"]
   }
