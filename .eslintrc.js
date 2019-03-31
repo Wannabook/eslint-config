@@ -26,6 +26,7 @@ module.exports = {
       { "blankLine": "always", "prev": "*", "next": "return" }
     ],
     "prettier/prettier": "warn",
-    "require-await": "error"
+    "require-await": "error",
+    "quotes": ["warn", "single"]
   }
 };
