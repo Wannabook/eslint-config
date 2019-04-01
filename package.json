@@ -1,6 +1,6 @@
 {
-  "name": "eslint-config-wannabook",
-  "version": "1.0.3",
+  "name": "wannabook-eslint-config",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "eslint",
     "eslint-config"
   ],
-  "author": "Ilya Kushlianski",
+  "author": "Wannabook",
   "license": "ISC",
   "devDependencies": {
     "eslint": "5.16.0",
