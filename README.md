@@ -6,26 +6,42 @@ This package includes basic ESLint config and prettier inside of it. Rules apply
 
 ## Installation
 
-Install the package as an npm dependency:
+Install eslint together with our custom package as an npm dependency:
 
 ```
-npm i wannabook-eslint-config
+npm i eslint wannabook-eslint-config --save-dev
+```
+
+Then add the following devDependencies to package.json:
+
+```angular2html
+    "babel-eslint": "10.0.1",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-plugin-babel": "5.3.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.11.0",
+    "prettier": "1.16.4"
 ```
 
 In your project, create a `.eslintrc` file and write:
 
 ```
 {
-  "extends": "wannabook-eslint-config"
+  "extends": "eslint-config-wannabook"
 }
 ```
+
+Make sure ESLint is turned on in your IDE. 
 
 You can add your custom rules below, like this:
 
 ```
 {
-  extends: "wannabook-eslint-config",
-  rules: {
+  "extends": "eslint-config-wannabook",
+  "rules": {
       "camelcase": "warn",
       "comma-dangle": [2, "only-multiline"],
   }
