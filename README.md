@@ -37,7 +37,7 @@ You can add your custom rules below, like this:
 Install respective packages:
 
 ```angular2html
-npm husky lint-staged --save-dev
+npm i husky lint-staged --save-dev
 ```
 
 and add the following lines to your package.json:
