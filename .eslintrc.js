@@ -19,12 +19,15 @@ module.exports = {
     "max-len": ["warn", { "code": 80 }],
     "max-lines": ["error", 300],
     "no-console": "warn",
+    "no-const-assign": "error",
+    "no-var": "warn",
     "no-unused-vars": ["warn", { "args": "none" }],
     "object-curly-spacing": ["warn", "always"],
     "padding-line-between-statements": [
       "warn",
       { "blankLine": "always", "prev": "*", "next": "return" }
     ],
+    "prefer-spread": "warn",
     "prettier/prettier": ["warn", {
       "tabWidth": 2,
       "trailingComma": "es5",
