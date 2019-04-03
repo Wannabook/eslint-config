@@ -9,10 +9,10 @@ This package includes basic ESLint config and prettier inside of it. Rules apply
 Install eslint together with our custom package as an npm dependency:
 
 ```
-npm i eslint wannabook-eslint-config --save-dev
+npm i eslint-config-wannabook --save-dev
 ```
 
-Then add the following devDependencies to package.json:
+Then add the following peer dependencies to devDependencies in package.json:
 
 ```angular2html
     "babel-eslint": "10.0.1",
@@ -30,13 +30,13 @@ In your project, create a `.eslintrc` file and write:
 
 ```
 {
-  "extends": "eslint-config-wannabook"
+  "extends": "wannabook"
 }
 ```
 
 Make sure ESLint is turned on in your IDE. 
 
-You can add your custom rules below, like this:
+You can override wannabook's rules and add yours below, like this:
 
 ```
 {
