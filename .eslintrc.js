@@ -4,19 +4,18 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: ["plugin:react/recommended", "plugin:prettier/recommended"],
+  extends: ["plugin:react/recommended", "plugin:prettier/recommended", "plugin:import/warnings"],
   parser: "babel-eslint",
   parserOptions: {
     ecmaVersion: 8,
     sourceType: "module",
   },
-  plugins: ["prettier"],
+  plugins: ["prettier", "react-hooks", "import"],
   rules: {
-    camelcase: "warn",
     "comma-dangle": [2, "only-multiline"],
     "jsx-quotes": "warn",
     "max-classes-per-file": ["warn", 1],
-    "max-len": ["warn", { "code": 80 }],
+    "max-len": ["warn", { "code": 90 }, { "ignoreTrailingComments": true }, { "ignoreComments": true }],
     "max-lines": ["error", 300],
     "no-console": "warn",
     "no-const-assign": "error",
@@ -35,6 +34,12 @@ module.exports = {
       "singleQuote": true,
     }],
     "require-await": "error",
-    "quotes": ["warn", "single"]
+    "quotes": ["warn", "single"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/order": ["warn", {
+      "groups": ["builtin", "external", "internal", ["parent", "sibling"], "index"],
+      "newlines-between": "always-and-inside-groups"
+    }]
   }
 };
