@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-wannabook",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   },
   "author": "Wannabook",
   "license": "ISC",
-  "peerDependencies": {
+  "devDependencies": {
     "eslint": "5.16.0",
     "prettier": "1.16.4",
     "babel-eslint": "10.0.1",
