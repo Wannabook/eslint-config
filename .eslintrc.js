@@ -4,11 +4,18 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: ["plugin:react/recommended", "plugin:prettier/recommended", "plugin:import/warnings"],
-  parser: "babel-eslint",
+  extends: [
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/warnings",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+  ],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 8,
-    sourceType: "module",
+    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
+    sourceType: "module" // Allows for the use of imports
   },
   plugins: ["prettier", "react-hooks", "import"],
   rules: {
@@ -40,6 +47,8 @@ module.exports = {
     "import/order": ["warn", {
       "groups": ["builtin", "external", "internal", ["parent", "sibling"], "index"],
       "newlines-between": "always-and-inside-groups"
-    }]
+    }],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-use-before-define": "off"
   }
 };
