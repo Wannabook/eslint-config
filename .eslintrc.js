@@ -18,6 +18,11 @@ module.exports = {
     sourceType: "module" // Allows for the use of imports
   },
   plugins: ["prettier", "react-hooks", "import"],
+  settings: {
+    'import/core-modules': [
+      'redux-saga/effects',
+    ]
+  },
   rules: {
     "comma-dangle": [2, "only-multiline"],
     "jsx-quotes": "warn",
@@ -44,6 +49,7 @@ module.exports = {
     "quotes": ["warn", "single"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
     "import/order": ["warn", {
       "groups": ["builtin", "external", "internal", ["parent", "sibling"], "index"],
       "newlines-between": "always-and-inside-groups"
